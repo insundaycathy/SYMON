@@ -8,7 +8,9 @@ This dataset contains 5193 movie/TV-show summary videos from various Youtube cha
 `url.txt`: The video urls are included in url.txt, the videos can be downloaded from Youtube base on the urls.
 #### Install yt-dlp (https://github.com/yt-dlp/yt-dlp) for downloading videos from Youtube 
 `python3 -m pip install -U yt-dlp`
-
+#### Use yt-dlp to download videos from url.txt
+`yt-dlp -i --no-warnings -c --no-overwrites --write-description --write-auto-subs --write-sub --sub-langs en.* -o [output_dir] --batch-file url.txt`
+[output_dir] is the output directory you wish to save the videos to
 ### timestamped_text
 This folder includes the subtitles downloaded directly from YouTube, it can also be downloaded from YouTube.
 ### preprocessed_text
