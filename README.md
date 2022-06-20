@@ -15,7 +15,20 @@ This dataset contains 5193 movie/TV-show summary videos from various Youtube cha
 
 ### Annotation files
 `timestamped_text`: This folder includes the subtitles downloaded directly from YouTube, it can also be downloaded from YouTube.
+
 `preprocessed_text`: This folder includes the preprocessed text files, the text are stripe of timestamps and punctutation are added.
 
-### gene_mask.py
-This program is for generating masks for the embedded subtitles.
+`asr_labeling.txt`: This file contains annotation of whether or not the text comes from YouTube ASR.
+
+### Processing tools:
+#### `gene_mask.py`: This program is for generating masks for masking out the subtitles embeded in frame.
+
+##### Prerequsite
+EasyOCR (https://github.com/JaidedAI/EasyOCR): `pip install easyocr`
+##### Useage
+`python gene_mask.py` 
+
+The unprocessed video file should be in `video/`.
+
+The processed video files would be saved to `mask/`.
+
