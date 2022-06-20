@@ -5,7 +5,6 @@ import os
 
 output_path='subtitle_mask.txt'
 video_masks=[]
-video_path = 'video/'
 reader = easyocr.Reader(['en'])
 def get_subtitle_mask(path):
     cap = cv2.VideoCapture(path)
@@ -89,7 +88,9 @@ def gene_mask(video_path, mask_file_path,output_path):
 
         out = cmd.output(output_path + v).run()
 
-video_path = 'video'
+video_path = 'video/'
 output_path = 'mask.txt'
-gene_mask_file()
+mask_path = 'mask/'
+gene_mask_file(video, output_path)
+gene_mask(video_path,output_path,mask_path)
 
