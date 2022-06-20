@@ -11,10 +11,11 @@ This dataset contains 5193 movie/TV-show summary videos from various Youtube cha
 #### Use yt-dlp to download videos from url.txt
 `yt-dlp -i --no-warnings -c --no-overwrites --write-description --write-auto-subs --write-sub --sub-langs en.* -o [output_dir] --batch-file url.txt`
 
-[output_dir] is the output directory you wish to save the videos to
-### timestamped_text
-This folder includes the subtitles downloaded directly from YouTube, it can also be downloaded from YouTube.
-### preprocessed_text
-This folder includes the preprocessed text files, the text are stripe of timestamps and punctutation are added.
+[output_dir] is the output directory you wish to save the videos to.
+
+### Annotation files
+`timestamped_text`: This folder includes the subtitles downloaded directly from YouTube, it can also be downloaded from YouTube.
+`preprocessed_text`: This folder includes the preprocessed text files, the text are stripe of timestamps and punctutation are added.
+
 ### gene_mask.py
 This program is for generating masks for the embedded subtitles.
