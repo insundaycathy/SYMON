@@ -9,7 +9,7 @@ This dataset contains 5193 movie/TV-show summary videos from various Youtube cha
 #### Install yt-dlp (https://github.com/yt-dlp/yt-dlp) for downloading videos from Youtube 
 `python3 -m pip install -U yt-dlp`
 #### Use yt-dlp to download videos from url.txt
-`yt-dlp -i --no-warnings -c --no-overwrites --write-description --write-auto-subs --write-sub --sub-langs en.* -o [output_dir]%(id)s.%(ext)s --batch-file url.txt`
+`yt-dlp -i --no-warnings -c --no-overwrites --write-description --write-auto-subs --write-sub --sub-langs en.* -o [output_dir]/%(id)s.%(ext)s --batch-file url.txt`
 
 [output_dir] is the output directory you wish to save the videos to.
 
